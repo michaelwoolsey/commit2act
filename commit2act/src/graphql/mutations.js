@@ -1,6 +1,930 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const createEducatorUser = /* GraphQL */ `
+  mutation CreateEducatorUser(
+    $input: CreateEducatorUserInput!
+    $condition: ModelEducatorUserConditionInput
+  ) {
+    createEducatorUser(input: $input, condition: $condition) {
+      id
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      School {
+        id
+        name
+        city
+        country
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      OwnedGroups {
+        items {
+          id
+          educatorUserID
+          groupID
+          educatorUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            OwnedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            educatorUserUserId
+            educatorUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      educatorUserUserId
+      educatorUserSchoolId
+    }
+  }
+`;
+export const updateEducatorUser = /* GraphQL */ `
+  mutation UpdateEducatorUser(
+    $input: UpdateEducatorUserInput!
+    $condition: ModelEducatorUserConditionInput
+  ) {
+    updateEducatorUser(input: $input, condition: $condition) {
+      id
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      School {
+        id
+        name
+        city
+        country
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      OwnedGroups {
+        items {
+          id
+          educatorUserID
+          groupID
+          educatorUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            OwnedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            educatorUserUserId
+            educatorUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      educatorUserUserId
+      educatorUserSchoolId
+    }
+  }
+`;
+export const deleteEducatorUser = /* GraphQL */ `
+  mutation DeleteEducatorUser(
+    $input: DeleteEducatorUserInput!
+    $condition: ModelEducatorUserConditionInput
+  ) {
+    deleteEducatorUser(input: $input, condition: $condition) {
+      id
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      School {
+        id
+        name
+        city
+        country
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      OwnedGroups {
+        items {
+          id
+          educatorUserID
+          groupID
+          educatorUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            OwnedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            educatorUserUserId
+            educatorUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      educatorUserUserId
+      educatorUserSchoolId
+    }
+  }
+`;
+export const createUser = /* GraphQL */ `
+  mutation CreateUser(
+    $input: CreateUserInput!
+    $condition: ModelUserConditionInput
+  ) {
+    createUser(input: $input, condition: $condition) {
+      id
+      username
+      email
+      avatar
+      type
+      Actions {
+        items {
+          id
+          date_of_action
+          image
+          points_received
+          g_co2_saved
+          userID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateUser = /* GraphQL */ `
+  mutation UpdateUser(
+    $input: UpdateUserInput!
+    $condition: ModelUserConditionInput
+  ) {
+    updateUser(input: $input, condition: $condition) {
+      id
+      username
+      email
+      avatar
+      type
+      Actions {
+        items {
+          id
+          date_of_action
+          image
+          points_received
+          g_co2_saved
+          userID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteUser = /* GraphQL */ `
+  mutation DeleteUser(
+    $input: DeleteUserInput!
+    $condition: ModelUserConditionInput
+  ) {
+    deleteUser(input: $input, condition: $condition) {
+      id
+      username
+      email
+      avatar
+      type
+      Actions {
+        items {
+          id
+          date_of_action
+          image
+          points_received
+          g_co2_saved
+          userID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createStudentUser = /* GraphQL */ `
+  mutation CreateStudentUser(
+    $input: CreateStudentUserInput!
+    $condition: ModelStudentUserConditionInput
+  ) {
+    createStudentUser(input: $input, condition: $condition) {
+      id
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      School {
+        id
+        name
+        city
+        country
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      JoinedGroups {
+        items {
+          id
+          studentUserID
+          groupID
+          studentUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            JoinedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            studentUserUserId
+            studentUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      studentUserUserId
+      studentUserSchoolId
+    }
+  }
+`;
+export const updateStudentUser = /* GraphQL */ `
+  mutation UpdateStudentUser(
+    $input: UpdateStudentUserInput!
+    $condition: ModelStudentUserConditionInput
+  ) {
+    updateStudentUser(input: $input, condition: $condition) {
+      id
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      School {
+        id
+        name
+        city
+        country
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      JoinedGroups {
+        items {
+          id
+          studentUserID
+          groupID
+          studentUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            JoinedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            studentUserUserId
+            studentUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      studentUserUserId
+      studentUserSchoolId
+    }
+  }
+`;
+export const deleteStudentUser = /* GraphQL */ `
+  mutation DeleteStudentUser(
+    $input: DeleteStudentUserInput!
+    $condition: ModelStudentUserConditionInput
+  ) {
+    deleteStudentUser(input: $input, condition: $condition) {
+      id
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      School {
+        id
+        name
+        city
+        country
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      JoinedGroups {
+        items {
+          id
+          studentUserID
+          groupID
+          studentUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            JoinedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            studentUserUserId
+            studentUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      studentUserUserId
+      studentUserSchoolId
+    }
+  }
+`;
+export const createSchool = /* GraphQL */ `
+  mutation CreateSchool(
+    $input: CreateSchoolInput!
+    $condition: ModelSchoolConditionInput
+  ) {
+    createSchool(input: $input, condition: $condition) {
+      id
+      name
+      city
+      country
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateSchool = /* GraphQL */ `
+  mutation UpdateSchool(
+    $input: UpdateSchoolInput!
+    $condition: ModelSchoolConditionInput
+  ) {
+    updateSchool(input: $input, condition: $condition) {
+      id
+      name
+      city
+      country
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteSchool = /* GraphQL */ `
+  mutation DeleteSchool(
+    $input: DeleteSchoolInput!
+    $condition: ModelSchoolConditionInput
+  ) {
+    deleteSchool(input: $input, condition: $condition) {
+      id
+      name
+      city
+      country
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
 export const createGroup = /* GraphQL */ `
   mutation CreateGroup(
     $input: CreateGroupInput!
@@ -11,19 +935,58 @@ export const createGroup = /* GraphQL */ `
       name
       description
       image
-      userID
-      users {
+      studentusers {
         items {
           id
+          studentUserID
           groupID
-          userID
+          studentUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            JoinedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            studentUserUserId
+            studentUserSchoolId
+          }
           group {
             id
             name
             description
             image
-            userID
-            users {
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
               nextToken
               startedAt
             }
@@ -33,29 +996,67 @@ export const createGroup = /* GraphQL */ `
             _deleted
             _lastChangedAt
           }
-          user {
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      educatorusers {
+        items {
+          id
+          educatorUserID
+          groupID
+          educatorUser {
             id
-            username
-            email
-            avatar
-            role
-            PlantBasedMealActions {
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            OwnedGroups {
               nextToken
               startedAt
             }
-            WaterActions {
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            educatorUserUserId
+            educatorUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
               nextToken
               startedAt
             }
-            TransportationActions {
-              nextToken
-              startedAt
-            }
-            GroupsOwned {
-              nextToken
-              startedAt
-            }
-            JoinedGroups {
+            educatorusers {
               nextToken
               startedAt
             }
@@ -92,19 +1093,58 @@ export const updateGroup = /* GraphQL */ `
       name
       description
       image
-      userID
-      users {
+      studentusers {
         items {
           id
+          studentUserID
           groupID
-          userID
+          studentUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            JoinedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            studentUserUserId
+            studentUserSchoolId
+          }
           group {
             id
             name
             description
             image
-            userID
-            users {
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
               nextToken
               startedAt
             }
@@ -114,29 +1154,67 @@ export const updateGroup = /* GraphQL */ `
             _deleted
             _lastChangedAt
           }
-          user {
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      educatorusers {
+        items {
+          id
+          educatorUserID
+          groupID
+          educatorUser {
             id
-            username
-            email
-            avatar
-            role
-            PlantBasedMealActions {
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            OwnedGroups {
               nextToken
               startedAt
             }
-            WaterActions {
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            educatorUserUserId
+            educatorUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
               nextToken
               startedAt
             }
-            TransportationActions {
-              nextToken
-              startedAt
-            }
-            GroupsOwned {
-              nextToken
-              startedAt
-            }
-            JoinedGroups {
+            educatorusers {
               nextToken
               startedAt
             }
@@ -173,69 +1251,382 @@ export const deleteGroup = /* GraphQL */ `
       name
       description
       image
+      studentusers {
+        items {
+          id
+          studentUserID
+          groupID
+          studentUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            JoinedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            studentUserUserId
+            studentUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      educatorusers {
+        items {
+          id
+          educatorUserID
+          groupID
+          educatorUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            OwnedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            educatorUserUserId
+            educatorUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createSubmittedAction = /* GraphQL */ `
+  mutation CreateSubmittedAction(
+    $input: CreateSubmittedActionInput!
+    $condition: ModelSubmittedActionConditionInput
+  ) {
+    createSubmittedAction(input: $input, condition: $condition) {
+      id
+      Action {
+        id
+        date_of_action
+        image
+        points_received
+        g_co2_saved
+        userID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      FactBonusPointQuiz {
+        id
+        fact_text
+        question_text
+        answers
+        correct_answer
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      submittedActionActionId
+      submittedActionFactBonusPointQuizId
+      submittedActionUserId
+    }
+  }
+`;
+export const updateSubmittedAction = /* GraphQL */ `
+  mutation UpdateSubmittedAction(
+    $input: UpdateSubmittedActionInput!
+    $condition: ModelSubmittedActionConditionInput
+  ) {
+    updateSubmittedAction(input: $input, condition: $condition) {
+      id
+      Action {
+        id
+        date_of_action
+        image
+        points_received
+        g_co2_saved
+        userID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      FactBonusPointQuiz {
+        id
+        fact_text
+        question_text
+        answers
+        correct_answer
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      submittedActionActionId
+      submittedActionFactBonusPointQuizId
+      submittedActionUserId
+    }
+  }
+`;
+export const deleteSubmittedAction = /* GraphQL */ `
+  mutation DeleteSubmittedAction(
+    $input: DeleteSubmittedActionInput!
+    $condition: ModelSubmittedActionConditionInput
+  ) {
+    deleteSubmittedAction(input: $input, condition: $condition) {
+      id
+      Action {
+        id
+        date_of_action
+        image
+        points_received
+        g_co2_saved
+        userID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      FactBonusPointQuiz {
+        id
+        fact_text
+        question_text
+        answers
+        correct_answer
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      submittedActionActionId
+      submittedActionFactBonusPointQuizId
+      submittedActionUserId
+    }
+  }
+`;
+export const createAction = /* GraphQL */ `
+  mutation CreateAction(
+    $input: CreateActionInput!
+    $condition: ModelActionConditionInput
+  ) {
+    createAction(input: $input, condition: $condition) {
+      id
+      date_of_action
+      image
+      points_received
+      g_co2_saved
       userID
-      users {
-        items {
-          id
-          groupID
-          userID
-          group {
-            id
-            name
-            description
-            image
-            userID
-            users {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          user {
-            id
-            username
-            email
-            avatar
-            role
-            PlantBasedMealActions {
-              nextToken
-              startedAt
-            }
-            WaterActions {
-              nextToken
-              startedAt
-            }
-            TransportationActions {
-              nextToken
-              startedAt
-            }
-            GroupsOwned {
-              nextToken
-              startedAt
-            }
-            JoinedGroups {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
       createdAt
       updatedAt
       _version
@@ -244,165 +1635,18 @@ export const deleteGroup = /* GraphQL */ `
     }
   }
 `;
-export const createUser = /* GraphQL */ `
-  mutation CreateUser(
-    $input: CreateUserInput!
-    $condition: ModelUserConditionInput
+export const updateAction = /* GraphQL */ `
+  mutation UpdateAction(
+    $input: UpdateActionInput!
+    $condition: ModelActionConditionInput
   ) {
-    createUser(input: $input, condition: $condition) {
+    updateAction(input: $input, condition: $condition) {
       id
-      username
-      email
-      avatar
-      role
-      PlantBasedMealActions {
-        items {
-          id
-          number_of_plant_based_meals
-          date_of_action
-          image
-          points_received
-          g_co2_saved
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      WaterActions {
-        items {
-          id
-          ml_tap_water
-          date_of_action
-          image
-          points_received
-          g_co2_saved
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      TransportationActions {
-        items {
-          id
-          km_walked
-          km_biked
-          km_transited
-          date_of_action
-          image
-          points_received
-          g_co2_save
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      GroupsOwned {
-        items {
-          id
-          name
-          description
-          image
-          userID
-          users {
-            items {
-              id
-              groupID
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      JoinedGroups {
-        items {
-          id
-          groupID
-          userID
-          group {
-            id
-            name
-            description
-            image
-            userID
-            users {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          user {
-            id
-            username
-            email
-            avatar
-            role
-            PlantBasedMealActions {
-              nextToken
-              startedAt
-            }
-            WaterActions {
-              nextToken
-              startedAt
-            }
-            TransportationActions {
-              nextToken
-              startedAt
-            }
-            GroupsOwned {
-              nextToken
-              startedAt
-            }
-            JoinedGroups {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
+      date_of_action
+      image
+      points_received
+      g_co2_saved
+      userID
       createdAt
       updatedAt
       _version
@@ -411,332 +1655,18 @@ export const createUser = /* GraphQL */ `
     }
   }
 `;
-export const updateUser = /* GraphQL */ `
-  mutation UpdateUser(
-    $input: UpdateUserInput!
-    $condition: ModelUserConditionInput
+export const deleteAction = /* GraphQL */ `
+  mutation DeleteAction(
+    $input: DeleteActionInput!
+    $condition: ModelActionConditionInput
   ) {
-    updateUser(input: $input, condition: $condition) {
+    deleteAction(input: $input, condition: $condition) {
       id
-      username
-      email
-      avatar
-      role
-      PlantBasedMealActions {
-        items {
-          id
-          number_of_plant_based_meals
-          date_of_action
-          image
-          points_received
-          g_co2_saved
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      WaterActions {
-        items {
-          id
-          ml_tap_water
-          date_of_action
-          image
-          points_received
-          g_co2_saved
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      TransportationActions {
-        items {
-          id
-          km_walked
-          km_biked
-          km_transited
-          date_of_action
-          image
-          points_received
-          g_co2_save
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      GroupsOwned {
-        items {
-          id
-          name
-          description
-          image
-          userID
-          users {
-            items {
-              id
-              groupID
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      JoinedGroups {
-        items {
-          id
-          groupID
-          userID
-          group {
-            id
-            name
-            description
-            image
-            userID
-            users {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          user {
-            id
-            username
-            email
-            avatar
-            role
-            PlantBasedMealActions {
-              nextToken
-              startedAt
-            }
-            WaterActions {
-              nextToken
-              startedAt
-            }
-            TransportationActions {
-              nextToken
-              startedAt
-            }
-            GroupsOwned {
-              nextToken
-              startedAt
-            }
-            JoinedGroups {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const deleteUser = /* GraphQL */ `
-  mutation DeleteUser(
-    $input: DeleteUserInput!
-    $condition: ModelUserConditionInput
-  ) {
-    deleteUser(input: $input, condition: $condition) {
-      id
-      username
-      email
-      avatar
-      role
-      PlantBasedMealActions {
-        items {
-          id
-          number_of_plant_based_meals
-          date_of_action
-          image
-          points_received
-          g_co2_saved
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      WaterActions {
-        items {
-          id
-          ml_tap_water
-          date_of_action
-          image
-          points_received
-          g_co2_saved
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      TransportationActions {
-        items {
-          id
-          km_walked
-          km_biked
-          km_transited
-          date_of_action
-          image
-          points_received
-          g_co2_save
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      GroupsOwned {
-        items {
-          id
-          name
-          description
-          image
-          userID
-          users {
-            items {
-              id
-              groupID
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      JoinedGroups {
-        items {
-          id
-          groupID
-          userID
-          group {
-            id
-            name
-            description
-            image
-            userID
-            users {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          user {
-            id
-            username
-            email
-            avatar
-            role
-            PlantBasedMealActions {
-              nextToken
-              startedAt
-            }
-            WaterActions {
-              nextToken
-              startedAt
-            }
-            TransportationActions {
-              nextToken
-              startedAt
-            }
-            GroupsOwned {
-              nextToken
-              startedAt
-            }
-            JoinedGroups {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
+      date_of_action
+      image
+      points_received
+      g_co2_saved
+      userID
       createdAt
       updatedAt
       _version
@@ -802,239 +1732,125 @@ export const deleteFactBonusPointQuiz = /* GraphQL */ `
     }
   }
 `;
-export const createPlantBasedMealAction = /* GraphQL */ `
-  mutation CreatePlantBasedMealAction(
-    $input: CreatePlantBasedMealActionInput!
-    $condition: ModelPlantBasedMealActionConditionInput
+export const createEducatorUserGroup = /* GraphQL */ `
+  mutation CreateEducatorUserGroup(
+    $input: CreateEducatorUserGroupInput!
+    $condition: ModelEducatorUserGroupConditionInput
   ) {
-    createPlantBasedMealAction(input: $input, condition: $condition) {
+    createEducatorUserGroup(input: $input, condition: $condition) {
       id
-      number_of_plant_based_meals
-      date_of_action
-      image
-      points_received
-      g_co2_saved
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const updatePlantBasedMealAction = /* GraphQL */ `
-  mutation UpdatePlantBasedMealAction(
-    $input: UpdatePlantBasedMealActionInput!
-    $condition: ModelPlantBasedMealActionConditionInput
-  ) {
-    updatePlantBasedMealAction(input: $input, condition: $condition) {
-      id
-      number_of_plant_based_meals
-      date_of_action
-      image
-      points_received
-      g_co2_saved
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const deletePlantBasedMealAction = /* GraphQL */ `
-  mutation DeletePlantBasedMealAction(
-    $input: DeletePlantBasedMealActionInput!
-    $condition: ModelPlantBasedMealActionConditionInput
-  ) {
-    deletePlantBasedMealAction(input: $input, condition: $condition) {
-      id
-      number_of_plant_based_meals
-      date_of_action
-      image
-      points_received
-      g_co2_saved
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const createWaterAction = /* GraphQL */ `
-  mutation CreateWaterAction(
-    $input: CreateWaterActionInput!
-    $condition: ModelWaterActionConditionInput
-  ) {
-    createWaterAction(input: $input, condition: $condition) {
-      id
-      ml_tap_water
-      date_of_action
-      image
-      points_received
-      g_co2_saved
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const updateWaterAction = /* GraphQL */ `
-  mutation UpdateWaterAction(
-    $input: UpdateWaterActionInput!
-    $condition: ModelWaterActionConditionInput
-  ) {
-    updateWaterAction(input: $input, condition: $condition) {
-      id
-      ml_tap_water
-      date_of_action
-      image
-      points_received
-      g_co2_saved
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const deleteWaterAction = /* GraphQL */ `
-  mutation DeleteWaterAction(
-    $input: DeleteWaterActionInput!
-    $condition: ModelWaterActionConditionInput
-  ) {
-    deleteWaterAction(input: $input, condition: $condition) {
-      id
-      ml_tap_water
-      date_of_action
-      image
-      points_received
-      g_co2_saved
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const createTransportationAction = /* GraphQL */ `
-  mutation CreateTransportationAction(
-    $input: CreateTransportationActionInput!
-    $condition: ModelTransportationActionConditionInput
-  ) {
-    createTransportationAction(input: $input, condition: $condition) {
-      id
-      km_walked
-      km_biked
-      km_transited
-      date_of_action
-      image
-      points_received
-      g_co2_save
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const updateTransportationAction = /* GraphQL */ `
-  mutation UpdateTransportationAction(
-    $input: UpdateTransportationActionInput!
-    $condition: ModelTransportationActionConditionInput
-  ) {
-    updateTransportationAction(input: $input, condition: $condition) {
-      id
-      km_walked
-      km_biked
-      km_transited
-      date_of_action
-      image
-      points_received
-      g_co2_save
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const deleteTransportationAction = /* GraphQL */ `
-  mutation DeleteTransportationAction(
-    $input: DeleteTransportationActionInput!
-    $condition: ModelTransportationActionConditionInput
-  ) {
-    deleteTransportationAction(input: $input, condition: $condition) {
-      id
-      km_walked
-      km_biked
-      km_transited
-      date_of_action
-      image
-      points_received
-      g_co2_save
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const createUserGroup = /* GraphQL */ `
-  mutation CreateUserGroup(
-    $input: CreateUserGroupInput!
-    $condition: ModelUserGroupConditionInput
-  ) {
-    createUserGroup(input: $input, condition: $condition) {
-      id
+      educatorUserID
       groupID
-      userID
+      educatorUser {
+        id
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
+              id
+              date_of_action
+              image
+              points_received
+              g_co2_saved
+              userID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        OwnedGroups {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        educatorUserUserId
+        educatorUserSchoolId
+      }
       group {
         id
         name
         description
         image
-        userID
-        users {
+        studentusers {
           items {
             id
+            studentUserID
             groupID
-            userID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
             group {
               id
               name
               description
               image
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            user {
-              id
-              username
-              email
-              avatar
-              role
               createdAt
               updatedAt
               _version
@@ -1050,117 +1866,26 @@ export const createUserGroup = /* GraphQL */ `
           nextToken
           startedAt
         }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      user {
-        id
-        username
-        email
-        avatar
-        role
-        PlantBasedMealActions {
+        educatorusers {
           items {
             id
-            number_of_plant_based_meals
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        WaterActions {
-          items {
-            id
-            ml_tap_water
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        TransportationActions {
-          items {
-            id
-            km_walked
-            km_biked
-            km_transited
-            date_of_action
-            image
-            points_received
-            g_co2_save
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        GroupsOwned {
-          items {
-            id
-            name
-            description
-            image
-            userID
-            users {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        JoinedGroups {
-          items {
-            id
+            educatorUserID
             groupID
-            userID
+            educatorUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
             group {
               id
               name
               description
               image
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            user {
-              id
-              username
-              email
-              avatar
-              role
               createdAt
               updatedAt
               _version
@@ -1190,31 +1915,30 @@ export const createUserGroup = /* GraphQL */ `
     }
   }
 `;
-export const updateUserGroup = /* GraphQL */ `
-  mutation UpdateUserGroup(
-    $input: UpdateUserGroupInput!
-    $condition: ModelUserGroupConditionInput
+export const updateEducatorUserGroup = /* GraphQL */ `
+  mutation UpdateEducatorUserGroup(
+    $input: UpdateEducatorUserGroupInput!
+    $condition: ModelEducatorUserGroupConditionInput
   ) {
-    updateUserGroup(input: $input, condition: $condition) {
+    updateEducatorUserGroup(input: $input, condition: $condition) {
       id
+      educatorUserID
       groupID
-      userID
-      group {
+      educatorUser {
         id
-        name
-        description
-        image
-        userID
-        users {
-          items {
-            id
-            groupID
-            userID
-            group {
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
               id
-              name
-              description
+              date_of_action
               image
+              points_received
+              g_co2_saved
               userID
               createdAt
               updatedAt
@@ -1222,12 +1946,46 @@ export const updateUserGroup = /* GraphQL */ `
               _deleted
               _lastChangedAt
             }
-            user {
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        OwnedGroups {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
               id
-              username
-              email
-              avatar
-              role
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
               createdAt
               updatedAt
               _version
@@ -1248,112 +2006,69 @@ export const updateUserGroup = /* GraphQL */ `
         _version
         _deleted
         _lastChangedAt
+        educatorUserUserId
+        educatorUserSchoolId
       }
-      user {
+      group {
         id
-        username
-        email
-        avatar
-        role
-        PlantBasedMealActions {
+        name
+        description
+        image
+        studentusers {
           items {
             id
-            number_of_plant_based_meals
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        WaterActions {
-          items {
-            id
-            ml_tap_water
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        TransportationActions {
-          items {
-            id
-            km_walked
-            km_biked
-            km_transited
-            date_of_action
-            image
-            points_received
-            g_co2_save
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        GroupsOwned {
-          items {
-            id
-            name
-            description
-            image
-            userID
-            users {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        JoinedGroups {
-          items {
-            id
+            studentUserID
             groupID
-            userID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
             group {
               id
               name
               description
               image
-              userID
               createdAt
               updatedAt
               _version
               _deleted
               _lastChangedAt
             }
-            user {
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        educatorusers {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
               id
-              username
-              email
-              avatar
-              role
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
               createdAt
               updatedAt
               _version
@@ -1383,31 +2098,30 @@ export const updateUserGroup = /* GraphQL */ `
     }
   }
 `;
-export const deleteUserGroup = /* GraphQL */ `
-  mutation DeleteUserGroup(
-    $input: DeleteUserGroupInput!
-    $condition: ModelUserGroupConditionInput
+export const deleteEducatorUserGroup = /* GraphQL */ `
+  mutation DeleteEducatorUserGroup(
+    $input: DeleteEducatorUserGroupInput!
+    $condition: ModelEducatorUserGroupConditionInput
   ) {
-    deleteUserGroup(input: $input, condition: $condition) {
+    deleteEducatorUserGroup(input: $input, condition: $condition) {
       id
+      educatorUserID
       groupID
-      userID
-      group {
+      educatorUser {
         id
-        name
-        description
-        image
-        userID
-        users {
-          items {
-            id
-            groupID
-            userID
-            group {
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
               id
-              name
-              description
+              date_of_action
               image
+              points_received
+              g_co2_saved
               userID
               createdAt
               updatedAt
@@ -1415,12 +2129,129 @@ export const deleteUserGroup = /* GraphQL */ `
               _deleted
               _lastChangedAt
             }
-            user {
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        OwnedGroups {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
               id
-              username
-              email
-              avatar
-              role
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        educatorUserUserId
+        educatorUserSchoolId
+      }
+      group {
+        id
+        name
+        description
+        image
+        studentusers {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        educatorusers {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
               createdAt
               updatedAt
               _version
@@ -1442,98 +2273,38 @@ export const deleteUserGroup = /* GraphQL */ `
         _deleted
         _lastChangedAt
       }
-      user {
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createStudentUserGroup = /* GraphQL */ `
+  mutation CreateStudentUserGroup(
+    $input: CreateStudentUserGroupInput!
+    $condition: ModelStudentUserGroupConditionInput
+  ) {
+    createStudentUserGroup(input: $input, condition: $condition) {
+      id
+      studentUserID
+      groupID
+      studentUser {
         id
-        username
-        email
-        avatar
-        role
-        PlantBasedMealActions {
-          items {
-            id
-            number_of_plant_based_meals
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        WaterActions {
-          items {
-            id
-            ml_tap_water
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        TransportationActions {
-          items {
-            id
-            km_walked
-            km_biked
-            km_transited
-            date_of_action
-            image
-            points_received
-            g_co2_save
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        GroupsOwned {
-          items {
-            id
-            name
-            description
-            image
-            userID
-            users {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        JoinedGroups {
-          items {
-            id
-            groupID
-            userID
-            group {
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
               id
-              name
-              description
+              date_of_action
               image
+              points_received
+              g_co2_saved
               userID
               createdAt
               updatedAt
@@ -1541,12 +2312,495 @@ export const deleteUserGroup = /* GraphQL */ `
               _deleted
               _lastChangedAt
             }
-            user {
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        JoinedGroups {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
               id
-              username
-              email
-              avatar
-              role
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        studentUserUserId
+        studentUserSchoolId
+      }
+      group {
+        id
+        name
+        description
+        image
+        studentusers {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        educatorusers {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateStudentUserGroup = /* GraphQL */ `
+  mutation UpdateStudentUserGroup(
+    $input: UpdateStudentUserGroupInput!
+    $condition: ModelStudentUserGroupConditionInput
+  ) {
+    updateStudentUserGroup(input: $input, condition: $condition) {
+      id
+      studentUserID
+      groupID
+      studentUser {
+        id
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
+              id
+              date_of_action
+              image
+              points_received
+              g_co2_saved
+              userID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        JoinedGroups {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        studentUserUserId
+        studentUserSchoolId
+      }
+      group {
+        id
+        name
+        description
+        image
+        studentusers {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        educatorusers {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteStudentUserGroup = /* GraphQL */ `
+  mutation DeleteStudentUserGroup(
+    $input: DeleteStudentUserGroupInput!
+    $condition: ModelStudentUserGroupConditionInput
+  ) {
+    deleteStudentUserGroup(input: $input, condition: $condition) {
+      id
+      studentUserID
+      groupID
+      studentUser {
+        id
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
+              id
+              date_of_action
+              image
+              points_received
+              g_co2_saved
+              userID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        JoinedGroups {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        studentUserUserId
+        studentUserSchoolId
+      }
+      group {
+        id
+        name
+        description
+        image
+        studentusers {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        educatorusers {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
               createdAt
               updatedAt
               _version

@@ -1,26 +1,102 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getGroup = /* GraphQL */ `
-  query GetGroup($id: ID!) {
-    getGroup(id: $id) {
+export const getEducatorUser = /* GraphQL */ `
+  query GetEducatorUser($id: ID!) {
+    getEducatorUser(id: $id) {
       id
-      name
-      description
-      image
-      userID
-      users {
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      School {
+        id
+        name
+        city
+        country
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      OwnedGroups {
         items {
           id
+          educatorUserID
           groupID
-          userID
+          educatorUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            OwnedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            educatorUserUserId
+            educatorUserSchoolId
+          }
           group {
             id
             name
             description
             image
-            userID
-            users {
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
               nextToken
               startedAt
             }
@@ -30,29 +106,866 @@ export const getGroup = /* GraphQL */ `
             _deleted
             _lastChangedAt
           }
-          user {
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      educatorUserUserId
+      educatorUserSchoolId
+    }
+  }
+`;
+export const listEducatorUsers = /* GraphQL */ `
+  query ListEducatorUsers(
+    $filter: ModelEducatorUserFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listEducatorUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
+              id
+              date_of_action
+              image
+              points_received
+              g_co2_saved
+              userID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        OwnedGroups {
+          items {
             id
-            username
-            email
-            avatar
-            role
-            PlantBasedMealActions {
-              nextToken
-              startedAt
+            educatorUserID
+            groupID
+            educatorUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
             }
-            WaterActions {
-              nextToken
-              startedAt
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
             }
-            TransportationActions {
-              nextToken
-              startedAt
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        educatorUserUserId
+        educatorUserSchoolId
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncEducatorUsers = /* GraphQL */ `
+  query SyncEducatorUsers(
+    $filter: ModelEducatorUserFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncEducatorUsers(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
+              id
+              date_of_action
+              image
+              points_received
+              g_co2_saved
+              userID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
             }
-            GroupsOwned {
-              nextToken
-              startedAt
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        OwnedGroups {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        educatorUserUserId
+        educatorUserSchoolId
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getUser = /* GraphQL */ `
+  query GetUser($id: ID!) {
+    getUser(id: $id) {
+      id
+      username
+      email
+      avatar
+      type
+      Actions {
+        items {
+          id
+          date_of_action
+          image
+          points_received
+          g_co2_saved
+          userID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listUsers = /* GraphQL */ `
+  query ListUsers(
+    $filter: ModelUserFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncUsers = /* GraphQL */ `
+  query SyncUsers(
+    $filter: ModelUserFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncUsers(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getStudentUser = /* GraphQL */ `
+  query GetStudentUser($id: ID!) {
+    getStudentUser(id: $id) {
+      id
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      School {
+        id
+        name
+        city
+        country
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      JoinedGroups {
+        items {
+          id
+          studentUserID
+          groupID
+          studentUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
             }
             JoinedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            studentUserUserId
+            studentUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      studentUserUserId
+      studentUserSchoolId
+    }
+  }
+`;
+export const listStudentUsers = /* GraphQL */ `
+  query ListStudentUsers(
+    $filter: ModelStudentUserFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listStudentUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
+              id
+              date_of_action
+              image
+              points_received
+              g_co2_saved
+              userID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        JoinedGroups {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        studentUserUserId
+        studentUserSchoolId
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncStudentUsers = /* GraphQL */ `
+  query SyncStudentUsers(
+    $filter: ModelStudentUserFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncStudentUsers(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
+              id
+              date_of_action
+              image
+              points_received
+              g_co2_saved
+              userID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        JoinedGroups {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        studentUserUserId
+        studentUserSchoolId
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getSchool = /* GraphQL */ `
+  query GetSchool($id: ID!) {
+    getSchool(id: $id) {
+      id
+      name
+      city
+      country
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listSchools = /* GraphQL */ `
+  query ListSchools(
+    $filter: ModelSchoolFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listSchools(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        city
+        country
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncSchools = /* GraphQL */ `
+  query SyncSchools(
+    $filter: ModelSchoolFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncSchools(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        name
+        city
+        country
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getGroup = /* GraphQL */ `
+  query GetGroup($id: ID!) {
+    getGroup(id: $id) {
+      id
+      name
+      description
+      image
+      studentusers {
+        items {
+          id
+          studentUserID
+          groupID
+          studentUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            JoinedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            studentUserUserId
+            studentUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      educatorusers {
+        items {
+          id
+          educatorUserID
+          groupID
+          educatorUser {
+            id
+            User {
+              id
+              username
+              email
+              avatar
+              type
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            School {
+              id
+              name
+              city
+              country
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            OwnedGroups {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+            educatorUserUserId
+            educatorUserSchoolId
+          }
+          group {
+            id
+            name
+            description
+            image
+            studentusers {
+              nextToken
+              startedAt
+            }
+            educatorusers {
               nextToken
               startedAt
             }
@@ -91,30 +1004,61 @@ export const listGroups = /* GraphQL */ `
         name
         description
         image
-        userID
-        users {
+        studentusers {
           items {
             id
+            studentUserID
             groupID
-            userID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
             group {
               id
               name
               description
               image
-              userID
               createdAt
               updatedAt
               _version
               _deleted
               _lastChangedAt
             }
-            user {
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        educatorusers {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
               id
-              username
-              email
-              avatar
-              role
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
               createdAt
               updatedAt
               _version
@@ -159,30 +1103,61 @@ export const syncGroups = /* GraphQL */ `
         name
         description
         image
-        userID
-        users {
+        studentusers {
           items {
             id
+            studentUserID
             groupID
-            userID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
             group {
               id
               name
               description
               image
-              userID
               createdAt
               updatedAt
               _version
               _deleted
               _lastChangedAt
             }
-            user {
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        educatorusers {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
               id
-              username
-              email
-              avatar
-              role
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
               createdAt
               updatedAt
               _version
@@ -209,18 +1184,90 @@ export const syncGroups = /* GraphQL */ `
     }
   }
 `;
-export const getUser = /* GraphQL */ `
-  query GetUser($id: ID!) {
-    getUser(id: $id) {
+export const getSubmittedAction = /* GraphQL */ `
+  query GetSubmittedAction($id: ID!) {
+    getSubmittedAction(id: $id) {
       id
-      username
-      email
-      avatar
-      role
-      PlantBasedMealActions {
-        items {
+      Action {
+        id
+        date_of_action
+        image
+        points_received
+        g_co2_saved
+        userID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      FactBonusPointQuiz {
+        id
+        fact_text
+        question_text
+        answers
+        correct_answer
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      User {
+        id
+        username
+        email
+        avatar
+        type
+        Actions {
+          items {
+            id
+            date_of_action
+            image
+            points_received
+            g_co2_saved
+            userID
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      submittedActionActionId
+      submittedActionFactBonusPointQuizId
+      submittedActionUserId
+    }
+  }
+`;
+export const listSubmittedActions = /* GraphQL */ `
+  query ListSubmittedActions(
+    $filter: ModelSubmittedActionFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listSubmittedActions(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        Action {
           id
-          number_of_plant_based_meals
           date_of_action
           image
           points_received
@@ -232,58 +1279,31 @@ export const getUser = /* GraphQL */ `
           _deleted
           _lastChangedAt
         }
-        nextToken
-        startedAt
-      }
-      WaterActions {
-        items {
+        FactBonusPointQuiz {
           id
-          ml_tap_water
-          date_of_action
-          image
-          points_received
-          g_co2_saved
-          userID
+          fact_text
+          question_text
+          answers
+          correct_answer
           createdAt
           updatedAt
           _version
           _deleted
           _lastChangedAt
         }
-        nextToken
-        startedAt
-      }
-      TransportationActions {
-        items {
+        User {
           id
-          km_walked
-          km_biked
-          km_transited
-          date_of_action
-          image
-          points_received
-          g_co2_save
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        nextToken
-        startedAt
-      }
-      GroupsOwned {
-        items {
-          id
-          name
-          description
-          image
-          userID
-          users {
+          username
+          email
+          avatar
+          type
+          Actions {
             items {
               id
-              groupID
+              date_of_action
+              image
+              points_received
+              g_co2_saved
               userID
               createdAt
               updatedAt
@@ -300,61 +1320,82 @@ export const getUser = /* GraphQL */ `
           _deleted
           _lastChangedAt
         }
-        nextToken
-        startedAt
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        submittedActionActionId
+        submittedActionFactBonusPointQuizId
+        submittedActionUserId
       }
-      JoinedGroups {
-        items {
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncSubmittedActions = /* GraphQL */ `
+  query SyncSubmittedActions(
+    $filter: ModelSubmittedActionFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncSubmittedActions(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        Action {
           id
-          groupID
+          date_of_action
+          image
+          points_received
+          g_co2_saved
           userID
-          group {
-            id
-            name
-            description
-            image
-            userID
-            users {
-              nextToken
-              startedAt
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        FactBonusPointQuiz {
+          id
+          fact_text
+          question_text
+          answers
+          correct_answer
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
+              id
+              date_of_action
+              image
+              points_received
+              g_co2_saved
+              userID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
             }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          user {
-            id
-            username
-            email
-            avatar
-            role
-            PlantBasedMealActions {
-              nextToken
-              startedAt
-            }
-            WaterActions {
-              nextToken
-              startedAt
-            }
-            TransportationActions {
-              nextToken
-              startedAt
-            }
-            GroupsOwned {
-              nextToken
-              startedAt
-            }
-            JoinedGroups {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
+            nextToken
+            startedAt
           }
           createdAt
           updatedAt
@@ -362,9 +1403,29 @@ export const getUser = /* GraphQL */ `
           _deleted
           _lastChangedAt
         }
-        nextToken
-        startedAt
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        submittedActionActionId
+        submittedActionFactBonusPointQuizId
+        submittedActionUserId
       }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getAction = /* GraphQL */ `
+  query GetAction($id: ID!) {
+    getAction(id: $id) {
+      id
+      date_of_action
+      image
+      points_received
+      g_co2_saved
+      userID
       createdAt
       updatedAt
       _version
@@ -373,133 +1434,20 @@ export const getUser = /* GraphQL */ `
     }
   }
 `;
-export const listUsers = /* GraphQL */ `
-  query ListUsers(
-    $filter: ModelUserFilterInput
+export const listActions = /* GraphQL */ `
+  query ListActions(
+    $filter: ModelActionFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listActions(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        username
-        email
-        avatar
-        role
-        PlantBasedMealActions {
-          items {
-            id
-            number_of_plant_based_meals
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        WaterActions {
-          items {
-            id
-            ml_tap_water
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        TransportationActions {
-          items {
-            id
-            km_walked
-            km_biked
-            km_transited
-            date_of_action
-            image
-            points_received
-            g_co2_save
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        GroupsOwned {
-          items {
-            id
-            name
-            description
-            image
-            userID
-            users {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        JoinedGroups {
-          items {
-            id
-            groupID
-            userID
-            group {
-              id
-              name
-              description
-              image
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            user {
-              id
-              username
-              email
-              avatar
-              role
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
+        date_of_action
+        image
+        points_received
+        g_co2_saved
+        userID
         createdAt
         updatedAt
         _version
@@ -511,14 +1459,14 @@ export const listUsers = /* GraphQL */ `
     }
   }
 `;
-export const syncUsers = /* GraphQL */ `
-  query SyncUsers(
-    $filter: ModelUserFilterInput
+export const syncActions = /* GraphQL */ `
+  query SyncActions(
+    $filter: ModelActionFilterInput
     $limit: Int
     $nextToken: String
     $lastSync: AWSTimestamp
   ) {
-    syncUsers(
+    syncActions(
       filter: $filter
       limit: $limit
       nextToken: $nextToken
@@ -526,124 +1474,11 @@ export const syncUsers = /* GraphQL */ `
     ) {
       items {
         id
-        username
-        email
-        avatar
-        role
-        PlantBasedMealActions {
-          items {
-            id
-            number_of_plant_based_meals
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        WaterActions {
-          items {
-            id
-            ml_tap_water
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        TransportationActions {
-          items {
-            id
-            km_walked
-            km_biked
-            km_transited
-            date_of_action
-            image
-            points_received
-            g_co2_save
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        GroupsOwned {
-          items {
-            id
-            name
-            description
-            image
-            userID
-            users {
-              nextToken
-              startedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        JoinedGroups {
-          items {
-            id
-            groupID
-            userID
-            group {
-              id
-              name
-              description
-              image
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            user {
-              id
-              username
-              email
-              avatar
-              role
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
+        date_of_action
+        image
+        points_received
+        g_co2_saved
+        userID
         createdAt
         updatedAt
         _version
@@ -699,27 +1534,6 @@ export const listFactBonusPointQuizs = /* GraphQL */ `
     }
   }
 `;
-
-export const listQuizID = /* GraphQL */ `
-  query ListFactBonusPointQuizs(
-    $filter: ModelFactBonusPointQuizFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listFactBonusPointQuizs(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-    ) {
-      items {
-        id
-      }
-      nextToken
-      startedAt
-    }
-  }
-`;
-
 export const syncFactBonusPointQuizs = /* GraphQL */ `
   query SyncFactBonusPointQuizs(
     $filter: ModelFactBonusPointQuizFilterInput
@@ -750,270 +1564,27 @@ export const syncFactBonusPointQuizs = /* GraphQL */ `
     }
   }
 `;
-export const getPlantBasedMealAction = /* GraphQL */ `
-  query GetPlantBasedMealAction($id: ID!) {
-    getPlantBasedMealAction(id: $id) {
+export const getEducatorUserGroup = /* GraphQL */ `
+  query GetEducatorUserGroup($id: ID!) {
+    getEducatorUserGroup(id: $id) {
       id
-      number_of_plant_based_meals
-      date_of_action
-      image
-      points_received
-      g_co2_saved
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const listPlantBasedMealActions = /* GraphQL */ `
-  query ListPlantBasedMealActions(
-    $filter: ModelPlantBasedMealActionFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listPlantBasedMealActions(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-    ) {
-      items {
-        id
-        number_of_plant_based_meals
-        date_of_action
-        image
-        points_received
-        g_co2_saved
-        userID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
-    }
-  }
-`;
-export const syncPlantBasedMealActions = /* GraphQL */ `
-  query SyncPlantBasedMealActions(
-    $filter: ModelPlantBasedMealActionFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncPlantBasedMealActions(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        number_of_plant_based_meals
-        date_of_action
-        image
-        points_received
-        g_co2_saved
-        userID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
-    }
-  }
-`;
-export const getWaterAction = /* GraphQL */ `
-  query GetWaterAction($id: ID!) {
-    getWaterAction(id: $id) {
-      id
-      ml_tap_water
-      date_of_action
-      image
-      points_received
-      g_co2_saved
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const listWaterActions = /* GraphQL */ `
-  query ListWaterActions(
-    $filter: ModelWaterActionFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listWaterActions(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        ml_tap_water
-        date_of_action
-        image
-        points_received
-        g_co2_saved
-        userID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
-    }
-  }
-`;
-export const syncWaterActions = /* GraphQL */ `
-  query SyncWaterActions(
-    $filter: ModelWaterActionFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncWaterActions(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        ml_tap_water
-        date_of_action
-        image
-        points_received
-        g_co2_saved
-        userID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
-    }
-  }
-`;
-export const getTransportationAction = /* GraphQL */ `
-  query GetTransportationAction($id: ID!) {
-    getTransportationAction(id: $id) {
-      id
-      km_walked
-      km_biked
-      km_transited
-      date_of_action
-      image
-      points_received
-      g_co2_save
-      userID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const listTransportationActions = /* GraphQL */ `
-  query ListTransportationActions(
-    $filter: ModelTransportationActionFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listTransportationActions(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-    ) {
-      items {
-        id
-        km_walked
-        km_biked
-        km_transited
-        date_of_action
-        image
-        points_received
-        g_co2_save
-        userID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
-    }
-  }
-`;
-export const syncTransportationActions = /* GraphQL */ `
-  query SyncTransportationActions(
-    $filter: ModelTransportationActionFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncTransportationActions(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        km_walked
-        km_biked
-        km_transited
-        date_of_action
-        image
-        points_received
-        g_co2_save
-        userID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
-    }
-  }
-`;
-export const getUserGroup = /* GraphQL */ `
-  query GetUserGroup($id: ID!) {
-    getUserGroup(id: $id) {
-      id
+      educatorUserID
       groupID
-      userID
-      group {
+      educatorUser {
         id
-        name
-        description
-        image
-        userID
-        users {
-          items {
-            id
-            groupID
-            userID
-            group {
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
               id
-              name
-              description
+              date_of_action
               image
+              points_received
+              g_co2_saved
               userID
               createdAt
               updatedAt
@@ -1021,12 +1592,129 @@ export const getUserGroup = /* GraphQL */ `
               _deleted
               _lastChangedAt
             }
-            user {
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        OwnedGroups {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
               id
-              username
-              email
-              avatar
-              role
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        educatorUserUserId
+        educatorUserSchoolId
+      }
+      group {
+        id
+        name
+        description
+        image
+        studentusers {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        educatorusers {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
               createdAt
               updatedAt
               _version
@@ -1048,76 +1736,38 @@ export const getUserGroup = /* GraphQL */ `
         _deleted
         _lastChangedAt
       }
-      user {
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listEducatorUserGroups = /* GraphQL */ `
+  query ListEducatorUserGroups(
+    $filter: ModelEducatorUserGroupFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listEducatorUserGroups(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
         id
-        username
-        email
-        avatar
-        role
-        PlantBasedMealActions {
-          items {
+        educatorUserID
+        groupID
+        educatorUser {
+          id
+          User {
             id
-            number_of_plant_based_meals
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        WaterActions {
-          items {
-            id
-            ml_tap_water
-            date_of_action
-            image
-            points_received
-            g_co2_saved
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        TransportationActions {
-          items {
-            id
-            km_walked
-            km_biked
-            km_transited
-            date_of_action
-            image
-            points_received
-            g_co2_save
-            userID
-            createdAt
-            updatedAt
-            _version
-            _deleted
-            _lastChangedAt
-          }
-          nextToken
-          startedAt
-        }
-        GroupsOwned {
-          items {
-            id
-            name
-            description
-            image
-            userID
-            users {
+            username
+            email
+            avatar
+            type
+            Actions {
               nextToken
               startedAt
             }
@@ -1127,19 +1777,228 @@ export const getUserGroup = /* GraphQL */ `
             _deleted
             _lastChangedAt
           }
-          nextToken
-          startedAt
-        }
-        JoinedGroups {
-          items {
+          School {
             id
-            groupID
-            userID
-            group {
+            name
+            city
+            country
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          OwnedGroups {
+            items {
               id
-              name
-              description
+              educatorUserID
+              groupID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+          educatorUserUserId
+          educatorUserSchoolId
+        }
+        group {
+          id
+          name
+          description
+          image
+          studentusers {
+            items {
+              id
+              studentUserID
+              groupID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          educatorusers {
+            items {
+              id
+              educatorUserID
+              groupID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncEducatorUserGroups = /* GraphQL */ `
+  query SyncEducatorUserGroups(
+    $filter: ModelEducatorUserGroupFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncEducatorUserGroups(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        educatorUserID
+        groupID
+        educatorUser {
+          id
+          User {
+            id
+            username
+            email
+            avatar
+            type
+            Actions {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          School {
+            id
+            name
+            city
+            country
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          OwnedGroups {
+            items {
+              id
+              educatorUserID
+              groupID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+          educatorUserUserId
+          educatorUserSchoolId
+        }
+        group {
+          id
+          name
+          description
+          image
+          studentusers {
+            items {
+              id
+              studentUserID
+              groupID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          educatorusers {
+            items {
+              id
+              educatorUserID
+              groupID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getStudentUserGroup = /* GraphQL */ `
+  query GetStudentUserGroup($id: ID!) {
+    getStudentUserGroup(id: $id) {
+      id
+      studentUserID
+      groupID
+      studentUser {
+        id
+        User {
+          id
+          username
+          email
+          avatar
+          type
+          Actions {
+            items {
+              id
+              date_of_action
               image
+              points_received
+              g_co2_saved
               userID
               createdAt
               updatedAt
@@ -1147,12 +2006,129 @@ export const getUserGroup = /* GraphQL */ `
               _deleted
               _lastChangedAt
             }
-            user {
+            nextToken
+            startedAt
+          }
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        School {
+          id
+          name
+          city
+          country
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        JoinedGroups {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
               id
-              username
-              email
-              avatar
-              role
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        studentUserUserId
+        studentUserSchoolId
+      }
+      group {
+        id
+        name
+        description
+        image
+        studentusers {
+          items {
+            id
+            studentUserID
+            groupID
+            studentUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              studentUserUserId
+              studentUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          nextToken
+          startedAt
+        }
+        educatorusers {
+          items {
+            id
+            educatorUserID
+            groupID
+            educatorUser {
+              id
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+              educatorUserUserId
+              educatorUserSchoolId
+            }
+            group {
+              id
+              name
+              description
+              image
               createdAt
               updatedAt
               _version
@@ -1182,28 +2158,55 @@ export const getUserGroup = /* GraphQL */ `
     }
   }
 `;
-export const listUserGroups = /* GraphQL */ `
-  query ListUserGroups(
-    $filter: ModelUserGroupFilterInput
+export const listStudentUserGroups = /* GraphQL */ `
+  query ListStudentUserGroups(
+    $filter: ModelStudentUserGroupFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listUserGroups(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listStudentUserGroups(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
       items {
         id
+        studentUserID
         groupID
-        userID
-        group {
+        studentUser {
           id
-          name
-          description
-          image
-          userID
-          users {
+          User {
+            id
+            username
+            email
+            avatar
+            type
+            Actions {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          School {
+            id
+            name
+            city
+            country
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          JoinedGroups {
             items {
               id
+              studentUserID
               groupID
-              userID
               createdAt
               updatedAt
               _version
@@ -1218,90 +2221,33 @@ export const listUserGroups = /* GraphQL */ `
           _version
           _deleted
           _lastChangedAt
+          studentUserUserId
+          studentUserSchoolId
         }
-        user {
+        group {
           id
-          username
-          email
-          avatar
-          role
-          PlantBasedMealActions {
+          name
+          description
+          image
+          studentusers {
             items {
               id
-              number_of_plant_based_meals
-              date_of_action
-              image
-              points_received
-              g_co2_saved
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          WaterActions {
-            items {
-              id
-              ml_tap_water
-              date_of_action
-              image
-              points_received
-              g_co2_saved
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          TransportationActions {
-            items {
-              id
-              km_walked
-              km_biked
-              km_transited
-              date_of_action
-              image
-              points_received
-              g_co2_save
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          GroupsOwned {
-            items {
-              id
-              name
-              description
-              image
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          JoinedGroups {
-            items {
-              id
+              studentUserID
               groupID
-              userID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          educatorusers {
+            items {
+              id
+              educatorUserID
+              groupID
               createdAt
               updatedAt
               _version
@@ -1328,14 +2274,14 @@ export const listUserGroups = /* GraphQL */ `
     }
   }
 `;
-export const syncUserGroups = /* GraphQL */ `
-  query SyncUserGroups(
-    $filter: ModelUserGroupFilterInput
+export const syncStudentUserGroups = /* GraphQL */ `
+  query SyncStudentUserGroups(
+    $filter: ModelStudentUserGroupFilterInput
     $limit: Int
     $nextToken: String
     $lastSync: AWSTimestamp
   ) {
-    syncUserGroups(
+    syncStudentUserGroups(
       filter: $filter
       limit: $limit
       nextToken: $nextToken
@@ -1343,19 +2289,42 @@ export const syncUserGroups = /* GraphQL */ `
     ) {
       items {
         id
+        studentUserID
         groupID
-        userID
-        group {
+        studentUser {
           id
-          name
-          description
-          image
-          userID
-          users {
+          User {
+            id
+            username
+            email
+            avatar
+            type
+            Actions {
+              nextToken
+              startedAt
+            }
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          School {
+            id
+            name
+            city
+            country
+            createdAt
+            updatedAt
+            _version
+            _deleted
+            _lastChangedAt
+          }
+          JoinedGroups {
             items {
               id
+              studentUserID
               groupID
-              userID
               createdAt
               updatedAt
               _version
@@ -1370,90 +2339,33 @@ export const syncUserGroups = /* GraphQL */ `
           _version
           _deleted
           _lastChangedAt
+          studentUserUserId
+          studentUserSchoolId
         }
-        user {
+        group {
           id
-          username
-          email
-          avatar
-          role
-          PlantBasedMealActions {
+          name
+          description
+          image
+          studentusers {
             items {
               id
-              number_of_plant_based_meals
-              date_of_action
-              image
-              points_received
-              g_co2_saved
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          WaterActions {
-            items {
-              id
-              ml_tap_water
-              date_of_action
-              image
-              points_received
-              g_co2_saved
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          TransportationActions {
-            items {
-              id
-              km_walked
-              km_biked
-              km_transited
-              date_of_action
-              image
-              points_received
-              g_co2_save
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          GroupsOwned {
-            items {
-              id
-              name
-              description
-              image
-              userID
-              createdAt
-              updatedAt
-              _version
-              _deleted
-              _lastChangedAt
-            }
-            nextToken
-            startedAt
-          }
-          JoinedGroups {
-            items {
-              id
+              studentUserID
               groupID
-              userID
+              createdAt
+              updatedAt
+              _version
+              _deleted
+              _lastChangedAt
+            }
+            nextToken
+            startedAt
+          }
+          educatorusers {
+            items {
+              id
+              educatorUserID
+              groupID
               createdAt
               updatedAt
               _version

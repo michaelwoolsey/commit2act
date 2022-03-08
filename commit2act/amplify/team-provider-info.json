@@ -56,5 +56,18 @@
         }
       }
     }
+  },
+  "dmrewrite": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-commit2act-dmrewrite-121815-authRole",
+      "UnauthRoleArn": "arn:aws:iam::016942909762:role/amplify-commit2act-dmrewrite-121815-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::016942909762:role/amplify-commit2act-dmrewrite-121815-authRole",
+      "Region": "ca-central-1",
+      "DeploymentBucketName": "amplify-commit2act-dmrewrite-121815-deployment",
+      "UnauthRoleName": "amplify-commit2act-dmrewrite-121815-unauthRole",
+      "StackName": "amplify-commit2act-dmrewrite-121815",
+      "StackId": "arn:aws:cloudformation:ca-central-1:016942909762:stack/amplify-commit2act-dmrewrite-121815/b98ad380-9e53-11ec-bbfd-0221d13fa32e",
+      "AmplifyAppId": "d2dgbokgf4vgx"
+    }
   }
 }
